@@ -1,12 +1,17 @@
 $( document ).ready(function() {
-    $("#slideshow > div:gt(0)").hide();
+    $("#image_slider > div:gt(0)").hide();
 
 setInterval(function() { 
-  $('#slideshow > div:first')
+  $('#image_slider > div:first')
   .fadeOut(1000)
   .next()
   .fadeIn(1000)
   .end()
-  .appendTo('#slideshow');
-}, 4000);
+  .appendTo('#image_slider');
+}, 3000);
+
+  $('.services_container').css('display', 'none');
+  $('.services_container').fadeIn(1000);
+
+
   });
