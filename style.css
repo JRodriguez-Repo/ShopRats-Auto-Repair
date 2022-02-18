@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 body {
-    background-color: white;
     margin: 0px;
     height: 100%;
 }
 header {
     height: 125px;
     width: auto;
+    position: relative;
+    top: 0px;
     background-color: rgb(41, 41, 41);
 }    
 nav {
@@ -22,30 +25,34 @@ nav {
 }  
 nav > a {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     font-weight: 400;
     text-decoration: none;
     word-spacing: 15px;
 }
-a:hover {
+nav > a:hover {
     color: red;
     font-size: 135%;
 }
 article {
-    width: 70%;
-    margin: auto;
-    color: white;
-    border-radius: 100px;
-    background-color: rgb(156, 27, 27);
+    width: 100%;
+    margin: 0;
+    color: black;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px gray;
+   
 }   
 article > h2 {
-    display: table;
-    color: white;
+    display: inline;
+    color: black;
     width: 60%;
     margin: auto;
     padding: 10px;
-    
+    position: relative;
+    top: 5px;
+    left: 30%;
+    right: 30%;
+    text-shadow: 1px 1px black;
 }    
 article > p {
     display: inline-block;
@@ -60,29 +67,17 @@ ul {
    list-style: none;
    font-size: 20px;
 }
-input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px;  
-    border: 2px solid gray;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px; 
-    resize: vertical 
-  }
-  input[type=submit] {
-    background-color: rgb(156, 27, 27);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+
 .headerLogo {
-    display: block;
-    align-content: center;
+    display: inline-block;
     height: 125px;
-    width: 150px;
+    width: auto;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 0 red;
+    
 }
 .phoneNumber {
     display: inline;
@@ -98,31 +93,29 @@ input[type=text], select, textarea {
     display: inline-block;
     margin: auto;
     position: relative; 
-    height: 450px;
+    height: 400px;
     width: 100%; 
     height: 400px; 
+    z-index: 0;
   }
 #image_slider > div { 
     display: inline-block;
-    margin: auto;
-    height: 450px;
-    width: 70%;
+    margin: 1px;
+    height: 400px;
+    width: 100%;
     position: absolute; 
     top: 0px; 
     left: 0px; 
     right: 0px; 
     bottom: 0px; 
+    z-index: 0;
 }
 .slides {
     width: 100%;
-    height: 450px;
-    border-radius: 50px;
-}
-.services_container {
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      background-color: rgb(37, 32, 32);
+    height: 400px;
+    box-shadow: 4px 4px 4px 4px rgb(37, 37, 37);
+    z-index: 0;
+    
 }
 .column {
     float: left;
@@ -136,22 +129,15 @@ input[type=text], select, textarea {
     display: table;
     clear: both;
 }
+.services_container {
+      
+     
+}
 .services_column {
-    display: table;
-    margin: auto;
-    width: 50%; 
-    height: 50px;
-    line-height: 1.5;
-    font-size: large;
-    text-align: center;
-    color: white;
-    background-color: rgb(156, 27, 27);
+ 
 }
 .services_column > img {
-    display: table;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    
 }
 .contact_info > h1, h3 {
     display: block;
@@ -180,7 +166,40 @@ form {
     color: white;
     border: 2px solid black;
     padding: 20px;
-
+}
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 2px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  input[type=submit] {
+    background-color: rgb(156, 27, 27);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+.appt_box {
+    display: inline;
+    height: 70px;
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    left: 10%;
+    top: 80%;
+    z-index: 100;
+    color: white;
+    text-align: center;
+    font-size: large;
+    border: 3px solid none;
+    border-radius: 10px;
+    background-color: red; 
 }
 
 
