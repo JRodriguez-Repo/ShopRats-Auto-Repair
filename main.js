@@ -10,9 +10,6 @@ setInterval( ()=> {
   .appendTo('#image_slider');
 }, 3000);
 
-$('.services_column > ul,').css('display', 'none');
-
-
 
 
   });
